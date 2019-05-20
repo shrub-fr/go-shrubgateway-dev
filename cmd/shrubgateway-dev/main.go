@@ -51,7 +51,7 @@ func main() {
 		ConnState: manageConnCache,
 	}
 
-	fmt.Println("shrubgateway-dev v0.1.0 (Go)")
+	fmt.Println("shrubgateway-dev v0.2.0 (Go)")
 	fmt.Println("For more information, go to https://shrub.fr/")
 	log.Fatal(server.ListenAndServeTLS("", ""))
 }
