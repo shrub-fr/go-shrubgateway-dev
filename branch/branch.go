@@ -23,7 +23,9 @@ var shrubberyDir string // working directory
 func init() {
 	var err error
 	shrubberyDir, err = os.Getwd()
-	log.Fatal(err, "failed to find the working directory")
+	if err != nil {
+		log.Fatal(err, " failed to find the working directory")
+	}
 }
 
 var base32Encoding = base32.NewEncoding("0123456789abcdefghijklmnopqrstuv").WithPadding(base32.NoPadding)
